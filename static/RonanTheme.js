@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         html {    
-            background: url('https://i.imgs.ovh/2025/11/01/7IJP0N.webp') no-repeat center center fixed;
+            background: url('https://free.picui.cn/free/2025/11/01/69059029a7667.jpg') no-repeat center center fixed;
             background-size: cover;
         }
 
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
         style.innerHTML = `
 
         html {    
-            background: url('https://i.imgs.ovh/2025/11/01/7IJP0N.webp') no-repeat center center fixed;
+            background: url('https://free.picui.cn/free/2025/11/01/69059029a7667.jpg') no-repeat center center fixed;
             background-size: cover;
         }
 
