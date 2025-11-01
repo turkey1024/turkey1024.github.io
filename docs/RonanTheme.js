@@ -27,122 +27,62 @@ document.addEventListener('DOMContentLoaded', function() {
                 transform: translateY(-1px);
             }
 
-            /* 笑话卡片样式 */
-            .joke-card {
+            /* 简洁笑话样式 - 无框小字 */
+            .joke-text {
                 position: fixed;
-                top: 20px;
-                right: 20px;
-                background: rgba(255, 255, 255, 0.95);
-                backdrop-filter: blur(10px);
-                border-radius: 12px;
-                padding: 15px;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-                border: 1px solid rgba(255, 255, 255, 0.3);
+                top: 25px;
+                right: 25px;
                 z-index: 1000;
-                min-width: 200px;
-                max-width: 280px;
+                max-width: 200px;
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                font-size: 0.75rem;
+                line-height: 1.3;
+                color: #666;
+                text-align: right;
                 cursor: pointer;
-                transition: all 0.3s ease;
-            }
-
-            .joke-card:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
-            }
-
-            .joke-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 10px;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-                padding-bottom: 8px;
-            }
-
-            .joke-title {
-                font-size: 0.9rem;
-                font-weight: 600;
-                color: #333;
-                display: flex;
-                align-items: center;
-                gap: 5px;
-            }
-
-            .joke-title::before {
-                content: "😂";
-                font-size: 1rem;
-            }
-
-            .joke-refresh {
+                transition: all 0.2s ease;
                 background: none;
                 border: none;
-                font-size: 1rem;
-                cursor: pointer;
-                padding: 5px;
-                border-radius: 50%;
-                transition: background 0.2s ease;
+                padding: 0;
+                margin: 0;
             }
 
-            .joke-refresh:hover {
-                background: rgba(0, 0, 0, 0.05);
-            }
-
-            .joke-content {
-                font-size: 0.85rem;
-                line-height: 1.4;
-                color: #444;
-                margin-bottom: 10px;
-                min-height: 40px;
+            .joke-text:hover {
+                color: #333;
+                transform: translateY(-1px);
             }
 
             .joke-setup {
-                font-weight: 500;
-                margin-bottom: 5px;
+                margin-bottom: 2px;
             }
 
             .joke-punchline {
+                font-weight: 500;
                 color: #e74c3c;
-                font-weight: 600;
             }
 
             .joke-loading {
-                text-align: center;
-                color: #666;
-                font-size: 0.8rem;
-                padding: 10px 0;
+                color: #999;
+                font-style: italic;
             }
 
             .joke-error {
-                text-align: center;
-                color: #e74c3c;
-                font-size: 0.8rem;
-                padding: 10px 0;
+                color: #999;
+                font-style: italic;
             }
 
-            .joke-category {
-                display: inline-block;
-                background: #3498db;
-                color: white;
-                padding: 2px 8px;
-                border-radius: 12px;
-                font-size: 0.7rem;
-                margin-top: 5px;
-            }
-
-            /* 移动端笑话卡片适配 */
+            /* 移动端适配 */
             @media (max-width: 768px) {
                 .avatar {
                     width: 180px;
                     height: 180px;
                 }
 
-                .joke-card {
-                    top: 15px;
-                    right: 15px;
-                    min-width: 180px;
-                    max-width: 240px;
-                    padding: 12px;
+                .joke-text {
+                    top: 20px;
+                    right: 20px;
+                    max-width: 150px;
+                    font-size: 0.7rem;
                 }
             }
 
@@ -152,23 +92,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     height: 150px;
                 }
 
-                .joke-card {
-                    top: 10px;
-                    right: 10px;
-                    min-width: 160px;
-                    max-width: 200px;
-                    padding: 10px;
-                }
-
-                .joke-content {
-                    font-size: 0.8rem;
+                .joke-text {
+                    top: 15px;
+                    right: 15px;
+                    max-width: 130px;
+                    font-size: 0.65rem;
                 }
             }
         `;
         document.head.appendChild(style);
 
-        // 添加笑话卡片到页面
-        addJokeCard();
+        // 添加笑话到页面
+        addJokeText();
     }
 
     // 其他页面只保留基础圆角
@@ -218,47 +153,31 @@ document.addEventListener('DOMContentLoaded', function() {
         document.head.appendChild(style);
     }
 
-    // 笑话卡片功能
-    function addJokeCard() {
-        const jokeCard = document.createElement('div');
-        jokeCard.className = 'joke-card';
-        jokeCard.innerHTML = `
-            <div class="joke-header">
-                <div class="joke-title">每日一笑</div>
-                <button class="joke-refresh" title="换一个笑话">🔄</button>
-            </div>
-            <div class="joke-loading">加载笑话中...</div>
-        `;
+    // 简洁笑话功能
+    function addJokeText() {
+        const jokeText = document.createElement('div');
+        jokeText.className = 'joke-text';
+        jokeText.innerHTML = '<div class="joke-loading">加载中...</div>';
         
-        document.body.appendChild(jokeCard);
+        document.body.appendChild(jokeText);
         
         // 获取笑话数据
         getJokeData();
         
-        // 点击刷新按钮获取新笑话
-        const refreshBtn = jokeCard.querySelector('.joke-refresh');
-        refreshBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            getJokeData();
-        });
-        
-        // 点击卡片也可以刷新笑话
-        jokeCard.addEventListener('click', function() {
+        // 点击获取新笑话
+        jokeText.addEventListener('click', function() {
             getJokeData();
         });
     }
 
     async function getJokeData() {
-        const jokeCard = document.querySelector('.joke-card');
-        const contentArea = jokeCard.querySelector('.joke-content') || jokeCard.querySelector('.joke-loading') || jokeCard.querySelector('.joke-error');
+        const jokeText = document.querySelector('.joke-text');
         
         // 显示加载状态
-        contentArea.innerHTML = '加载笑话中...';
-        contentArea.className = 'joke-loading';
+        jokeText.innerHTML = '<div class="joke-loading">加载中...</div>';
         
         try {
-            // 使用免费笑话API - 不需要API密钥
-            // 这里使用JokeAPI，支持多种类型的笑话
+            // 使用免费笑话API
             const response = await fetch('https://v2.jokeapi.dev/joke/Any?type=twopart&safe-mode');
             
             if (!response.ok) {
@@ -266,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             const jokeData = await response.json();
-            updateJokeCard(jokeData);
+            updateJokeText(jokeData);
             
         } catch (error) {
             console.error('获取笑话失败:', error);
@@ -274,52 +193,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function updateJokeCard(data) {
-        const jokeCard = document.querySelector('.joke-card');
+    function updateJokeText(data) {
+        const jokeText = document.querySelector('.joke-text');
         
         let jokeHTML = '';
         
         if (data.type === 'twopart') {
-            // 两部分笑话（setup + delivery）
+            // 两部分笑话
             jokeHTML = `
                 <div class="joke-setup">${data.setup}</div>
                 <div class="joke-punchline">${data.delivery}</div>
             `;
         } else if (data.type === 'single') {
             // 单行笑话
-            jokeHTML = `<div class="joke-content">${data.joke}</div>`;
+            jokeHTML = `<div>${data.joke}</div>`;
         }
         
-        // 添加分类标签
-        if (data.category) {
-            jokeHTML += `<div class="joke-category">${data.category}</div>`;
-        }
-        
-        const contentDiv = document.createElement('div');
-        contentDiv.className = 'joke-content';
-        contentDiv.innerHTML = jokeHTML;
-        
-        // 替换内容区域
-        const oldContent = jokeCard.querySelector('.joke-content, .joke-loading, .joke-error');
-        if (oldContent) {
-            jokeCard.replaceChild(contentDiv, oldContent);
-        } else {
-            jokeCard.appendChild(contentDiv);
-        }
+        jokeText.innerHTML = jokeHTML;
     }
 
     function showJokeError() {
-        const jokeCard = document.querySelector('.joke-card');
-        const contentDiv = document.createElement('div');
-        contentDiv.className = 'joke-error';
-        contentDiv.textContent = '暂时无法获取笑话，点击重试';
-        
-        // 替换内容区域
-        const oldContent = jokeCard.querySelector('.joke-content, .joke-loading, .joke-error');
-        if (oldContent) {
-            jokeCard.replaceChild(contentDiv, oldContent);
-        } else {
-            jokeCard.appendChild(contentDiv);
-        }
+        const jokeText = document.querySelector('.joke-text');
+        jokeText.innerHTML = '<div class="joke-error">点击刷新笑话</div>';
     }
 });
