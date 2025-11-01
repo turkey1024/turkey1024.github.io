@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         html {    
-            background: url('https://blog.freeblock.cn/background.webp') no-repeat center center fixed;
+            background: url('https://i.imgs.ovh/2025/11/01/7IJP0N.webp') no-repeat center center fixed;
             background-size: cover;
         }
 
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //文章页主题------------------------------------------------------------------------------
     
-    else if (currentUrl.includes('/post/') || currentUrl.includes('/link.html') || currentUrl.includes('/about.html')) {
+   /* else if (currentUrl.includes('/post/') || currentUrl.includes('/link.html') || currentUrl.includes('/about.html')) {
         console.log('文章页主题');
 
         let style = document.createElement("style");
@@ -109,21 +109,22 @@ document.addEventListener('DOMContentLoaded', function() {
         html {    
             background: url('https://blog.freeblock.cn/background.webp') no-repeat center center fixed;
             background-size: cover;
-        }
+        }*/
 
         /* 主体布局 */
-        body {
+       /*
+            body {
             min-width: 200px;
             max-width: 885px;
-            margin: 30px auto;   /*设置所有外边距离 */
+            margin: 30px auto;   
             font-size: 16px;
             font-family: sans-serif;
             line-height: 1.25;
             background: rgba(237, 239, 233, 0.84); 
             border-radius: 10px; /* 圆角边框 */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 添加阴影 */
-            overflow: auto;
-        }
+            /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 添加阴影 */
+           // overflow: auto;
+       // } 
 
         /* markdown内容 */
         /* 图片圆角 */
@@ -168,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }   
         `;
         document.head.appendChild(style);
-        // 添加赞助商信息到页脚
+        添加赞助商信息到页脚
         let footer = document.getElementById('footer');
         let sponsorInfo = document.createElement('div');
         sponsorInfo.className = 'sponsor-info';
