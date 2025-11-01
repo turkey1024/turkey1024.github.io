@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
         style.innerHTML = `
             /* 只增大头像，不改变其他任何布局 */
             .avatar {
-                width: 220px; /* 从200px增加到220px */
-                height: 220px;
+                width: 150px; /* 从200px增加到220px */
+                height: 150px;
             }
 
             /* 保留基础圆角优化 */
@@ -74,8 +74,8 @@ document.addEventListener('DOMContentLoaded', function() {
             /* 移动端适配 */
             @media (max-width: 768px) {
                 .avatar {
-                    width: 180px;
-                    height: 180px;
+                    width: 140px;
+                    height: 140px;
                 }
 
                 .joke-text {
