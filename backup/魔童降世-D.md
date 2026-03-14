@@ -4,9 +4,10 @@
 2025 github action爬下所有帖子
 2025 发现api接口返回用户ip，被坛主警告
 2025 滥用接口收集总计1000用户ip，被坛主报警威胁删库,殊不知我有本地备份
-`Gmeek-html<img src="https://free.picui.cn/free/2026/03/14/69b5773314ea3.jpg">`  
+`Gmeek-html<img src="https://free.picui.cn/free/2026/03/14/69b577e47a79a.jpg">`  
 2025 滥用api接口导致网站出现分钟级瘫痪，发现服务器承受能力低下，防护薄弱
 2025 借助ddddocr识别验证码，爆破账号，失败
 2026 小规模cc测试，瘫痪时间拉长
 2026 发动最大规模cc攻击，连续3-5次，如网站复活立即打死，反复几遍就死透了。下午论坛全国测试全红，晚上稍微恢复，第二天恢复正常。死了大约10小时。
 `Gmeek-html<img src="https://free.picui.cn/free/2026/03/14/69b5773314ea3.jpg">`  
+
