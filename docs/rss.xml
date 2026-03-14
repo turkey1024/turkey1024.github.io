@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>互联网垃圾站</title><link>https://turkey1024.github.io</link><description>如题</description><copyright>互联网垃圾站</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://free.picui.cn/free/2025/11/01/69059029afc89.webp</url><title>avatar</title><link>https://turkey1024.github.io</link></image><lastBuildDate>Sat, 14 Mar 2026 15:07:44 +0000</lastBuildDate><managingEditor>互联网垃圾站</managingEditor><ttl>60</ttl><webMaster>互联网垃圾站</webMaster><item><title>魔童降世:D</title><link>https://turkey1024.github.io/post/mo-tong-jiang-shi--D.html</link><description>记我对开源论坛的摧残
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>互联网垃圾站</title><link>https://turkey1024.github.io</link><description>如题</description><copyright>互联网垃圾站</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://free.picui.cn/free/2025/11/01/69059029afc89.webp</url><title>avatar</title><link>https://turkey1024.github.io</link></image><lastBuildDate>Sat, 14 Mar 2026 15:09:16 +0000</lastBuildDate><managingEditor>互联网垃圾站</managingEditor><ttl>60</ttl><webMaster>互联网垃圾站</webMaster><item><title>魔童降世:D</title><link>https://turkey1024.github.io/post/mo-tong-jiang-shi--D.html</link><description>记我对开源论坛的摧残
 2025 发现开源论坛
 2025 测试api接口
 2025 github action爬下所有帖子
 2025 发现api接口返回用户ip，被坛主警告
 2025 滥用接口收集总计1000用户ip，被坛主报警威胁删库,殊不知我有本地备份
-`Gmeek-html&lt;img src='https://free.picui.cn/free/2026/03/14/69b5773314ea3.jpg
-https://free.picui.cn/free/2026/03/14/69b577e47a79a.jpg'&gt;`  
+`Gmeek-html&lt;img src='https://free.picui.cn/free/2026/03/14/69b5773314ea3.jpg'&gt;`  
 2025 滥用api接口导致网站出现分钟级瘫痪，发现服务器承受能力低下，防护薄弱
 2025 借助ddddocr识别验证码，爆破账号，失败
 2026 小规模cc测试，瘫痪时间拉长
