@@ -1,0 +1,4 @@
+三台服务器，cpu上限设置50%，挖门罗币玩
+算力只有可怜的125H/s，不如计算器
+但是也挖到了0.00000018个门罗币
+这是我的钱包地址48fF2B857qbLeJJQqdSFUd7C5z1t3n9ecABSQvB8K7xFSoGxMud8pv3XnAWqmrFg4tVzWTwfsRmAkTmEBBYeaJwEAdKEiFT欢迎打赏
