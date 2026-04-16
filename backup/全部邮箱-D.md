@@ -10,4 +10,4 @@
 - *@qqqz.qzz.io
 - *@ljx.cn.mt
 - ljxx@proton.me
-- but@actually-ljx.is-not.cool
+- *@actually-ljx.is-not.cool
