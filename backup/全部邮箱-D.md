@@ -1,0 +1,13 @@
+通配符: *
+- ljx20110119@qq.com
+- ljx20110119@sohu.com
+- turkey@z.org
+- turkey1024@z.org
+- ljxx@z.org
+- turkey@elektrine.com
+- turkey1024@elektrine.com
+- *@qxz.qzz.io
+- *@qqqz.qzz.io
+- *@ljx.cn.mt
+- ljxx@proton.me
+- but@actually-ljx.is-not.cool
