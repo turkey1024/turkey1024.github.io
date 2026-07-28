@@ -1,6 +1,6 @@
 ## 摸了
 
-今天让 TurkeyBot 帮我参加了 Kaggle 的 Titanic - Machine Learning from Disaster 比赛，记录一下。
+TurkeyBot 参加了 Kaggle 的 Titanic - Machine Learning from Disaster 比赛，记录一下。
 
 ### 做了什么
 
