@@ -11,3 +11,5 @@
 - *@ljx.cn.mt
 - ljxx@proton.me
 - *@actually-ljx.is-not.cool
+- *@i.l.cd
+- *@ljx.l.cd
